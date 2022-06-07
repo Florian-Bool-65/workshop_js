@@ -5,8 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-
+  <title>Social Posts</title>
 
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css'
         integrity='sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==' crossorigin='anonymous' />
@@ -21,13 +20,44 @@
 </head>
 
 <body>
-  <h1 class="text-center py-3 fw-bold">Social Posts</h1>
+  <!------------------------------------
+    - HEADER CON FORM FILTRI -
+    ------------------------------------>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <form class="d-flex align-items-center ms-auto" role="search">
+          <div class="form-check form-switch me-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            <label class="form-check-label text-nowrap" for="flexSwitchCheckDefault">Mostra solo preferiti</label>
+          </div>
 
-  <div class="container">
+          <input class="form-control me-3" type="search" placeholder="Cerca per contenuto" aria-label="Search">
+
+          <div class="btn-group">
+            <button class="btn btn-success" type="submit">Cerca</button>
+            <button class="btn btn-outline-secondary" type="reset">Annulla</button>
+          </div>
+        </form>
+      </div>
+    </nav>
+  </header>
+
+  <!------------------------------------
+    - CONTENUTO PRINCIPALE DELLA PAGINA -
+    ------------------------------------>
+  <main class="container pb-5">
+    <h1 class="text-center py-3 fw-bold">Social Posts</h1>
+
     <div class="row justify-content-center">
+
+      <!-- creiamo una col solo per limitare la larghezza di una singola card -->
       <div class="col-12 col-md-8 col-lg-7 col-xl-6">
+
+        <!-- contenitore dei singoli post -->
         <div id="posts-container">
 
+          <!-- Template di una singola card di un post -->
           <div class="card card-post">
             <div class="card-body">
               <div class="post__header">
@@ -69,10 +99,24 @@
         </div>
       </div>
     </div>
-  </div>
+  </main>
 
+  <!------------------------------------
+    - FOOTER -
+    ------------------------------------>
+  <footer>
+    <div class="container">
+      <div class="text-center">Made with <i class="fas fa-heart"></i> by Classe #65</div>
+    </div>
+  </footer>
 
-  <script src="js/main.js"></script>
+  <!------------------------------------
+    - SCRIPT NECESSARI AL FUNZIONAMENTO -
+    ------------------------------------>
+    <script src="js/postsDatabase.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/domCardCreator.js"></script>
+    <script src="js/domEventsHandler.js"></script>
 </body>
 
 </html>
