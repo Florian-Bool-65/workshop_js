@@ -88,7 +88,7 @@ function getFooterTemplate(postId, postLikes) {
  * @returns {string}
  */
 function getPostCardTemplate(post) {
-  return `<div class="card card-post">
+  return `<div class="card card-post" >
     <div class="card-body">
       ${getHeaderTemplate(post.author.image, post.author.name, post.created_at)}
       ${getTextTemplate(post.content)}
