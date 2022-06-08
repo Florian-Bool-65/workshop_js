@@ -72,7 +72,7 @@ const DomCardCreator = {
           </div>
   
           <div class="col">
-            Piace a <strong id="like-counter-1">${postLikes}</strong> persone
+            Piace a <strong id="like-counter-${postId}">${postLikes}</strong> persone
           </div>
         </div>
       </div>`;

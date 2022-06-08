@@ -12,7 +12,6 @@ const postContainer = document.getElementById("posts-container");
 /* 
 for (let i = 0; i < listaPosts.length; i++) {
   const post = listaPosts[i];
-  
 } */
 
 listaPosts.forEach(function (post) {
