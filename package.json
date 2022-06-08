@@ -1,0 +1,28 @@
+{
+    "title": "Workshop JS - Social Posts",
+    "private": "true",
+    "name": "workshop-js-social-posts",
+    "version": "1.0.0",
+    "description": "Ricreiamo un feed social aggiungendo al layout di base fornito...",
+    "main": "index.html",
+    "engines": {
+        "node": "=>14.18.1",
+        "npm": "=>6.14.15"
+    },
+    "scripts": {
+        "start": "serve",
+        "build": "echo This is a static template, there is no bundler or bundling involved!"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://..."
+    },
+    "keywords": [],
+    "bugs": {
+        "url": "https://..."
+    },
+    "homepage": "https://...",
+    "devDependencies": {
+        "serve": "^13.0.2"
+    }
+}
