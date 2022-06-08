@@ -65,14 +65,14 @@ const DomCardCreator = {
     return `<div class="post__footer">
         <div class="row align-items-center text-center">
           <div class="col">
-            <a class="btn btn-link" href="#" data-postid="${postId}">
+            <a class="btn btn-link selected-like-button" id="like-button-${postId}" data-postid="${postId}">
               <i class="fas fa-thumbs-up"></i>
               Mi Piace
             </a>
           </div>
   
           <div class="col">
-            Piace a <strong id="like-counter-${postId}">${postLikes}</strong> persone
+            Piace a <strong id="like-counter-${postId}" data-likepost="${postLikes}">${postLikes}</strong> persone
           </div>
         </div>
       </div>`;
