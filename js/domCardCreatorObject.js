@@ -21,10 +21,26 @@ const DomCardCreator = {
     const itaCreationTime = new Date(postCreationTime).toLocaleDateString(
       "it-IT"
     );
+
+    let imguser =``;
+
+    if(postAuthorIcon!=null){
+      imguser = `<img class="profile-pic" src="${postAuthorIcon}" alt="Profile image of ${postAuthorName}"></img>`;
+    }else{
+      console.log("non c'è", postAuthorName);
+
+      let namesurname = postAuthorName.split(" ");
+      let nome = namesurname[0]; 
+      let surname = namesurname[1]; 
+      
+      imguser =`<span class="post-auhtor_initial">${nome[0]}${surname[0]}</span>`;
+
+    }  
+
     return `<div class="post__header">
       <div class="post-meta">
         <div class="post-meta__icon">
-          <img class="profile-pic" src="${postAuthorIcon}" alt="Profile image of ${postAuthorName}">
+          ${imguser}
         </div>
         <div class="post-meta__data">
           <div class="post-meta__author">${postAuthorName}</div>
