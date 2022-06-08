@@ -26,22 +26,18 @@ listaPosts.forEach(function (post) {
   }
 });
 
-const likebuttonslist = document.querySelectorAll('.selected-like-button');
+const likebuttonslist = document.querySelectorAll(".selected-like-button");
 
-likebuttonslist.forEach(element=>{
+likebuttonslist.forEach((element) => {
+  element.addEventListener("click", function () {
+    let datapostid = element.getAttribute("data-postid");
 
-  element.addEventListener("click", function() {
+    let likespost = document.getElementById("like-counter-" + datapostid);
 
-    let datapostid= element.getAttribute('data-postid');
+    let currentlike = parseInt(likespost.getAttribute("data-likepost"));
+    currentlike += 1;
 
-    let likespost = document.getElementById("like-counter-"+datapostid);
-    
-    let currentlike = parseInt(likespost.getAttribute('data-likepost'));
-    currentlike+=1;
-
-    likespost.setAttribute('data-likepost',currentlike);
-    likespost.innerHTML= currentlike;
-
+    likespost.setAttribute("data-likepost", currentlike);
+    likespost.innerHTML = currentlike;
   });
-
 });

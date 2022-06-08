@@ -18,6 +18,9 @@ const DomCardCreator = {
     postAuthorName,
     postCreationTime
   ) {
+    const itaCreationTime = new Date(postCreationTime).toLocaleDateString(
+      "it-IT"
+    );
     return `<div class="post__header">
       <div class="post-meta">
         <div class="post-meta__icon">
@@ -25,7 +28,7 @@ const DomCardCreator = {
         </div>
         <div class="post-meta__data">
           <div class="post-meta__author">${postAuthorName}</div>
-          <div class="post-meta__time">${postCreationTime}</div>
+          <div class="post-meta__time">${itaCreationTime}</div>
         </div>
       </div>
     </div>`;
