@@ -27,14 +27,10 @@ const DomCardCreator = {
     if(postAuthorIcon!=null){
       imguser = `<img class="profile-pic" src="${postAuthorIcon}" alt="Profile image of ${postAuthorName}"></img>`;
     }else{
-      console.log("non c'è", postAuthorName);
-
       let namesurname = postAuthorName.split(" ");
       let nome = namesurname[0]; 
-      let surname = namesurname[1]; 
-      
-      imguser =`<span class="post-auhtor_initial">${nome[0]}${surname[0]}</span>`;
-
+      let surname = namesurname[1];       
+      imguser =`<span class="post-author_initial">${nome[0]}${surname[0]}</span>`;
     }  
 
     return `<div class="post__header">
